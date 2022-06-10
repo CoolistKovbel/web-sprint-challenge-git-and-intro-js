@@ -358,9 +358,7 @@ Use artistByCountry to do the following:
 function artistByCountry(artists, nationality){
   const ar = []
   artists.forEach((value) => {
-    if(value.nationality.split(',').length !== 2 && value.nationality === nationality){
-      ar.push(value.name)
-    }
+    if(value.nationality.split(',').length !== 2 && value.nationality === nationality) ar.push(value.name)
   })
   return ar
 }
