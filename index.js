@@ -314,10 +314,15 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+function lotsOfArt(arr) {
+  const valuedArtists = []
+  arr.forEach((value) => {
+    if(value.paintings >= 100) valuedArtists.push(value.name);
+  })
 
+  return valuedArtists
+}
+console.log(lotsOfArt(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
