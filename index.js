@@ -275,7 +275,7 @@ function removeArtist(artist, indx) {
   })
   return arr
 }
-console.log(removeArtist(artists, 0))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -293,8 +293,15 @@ Use addArtist to do the following:
 4. Return the array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(arr, name, years, genre, nationality, bio) {
+  arr.push({
+    name,
+    years,
+    genre,
+    nationality,
+    bio
+  });
+  return arr
 }
 
 
