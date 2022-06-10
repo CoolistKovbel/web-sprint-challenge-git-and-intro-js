@@ -248,7 +248,7 @@ Use copy to do the following:
 
 function listOfNames(artist) {
   let ar = []
-  artist.forEach((value,index, array) => {
+  artist.forEach((value) => {
     ar.push(value.name)
   })
 
@@ -335,9 +335,13 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(artist, artistName){
-  artist.forEach((value,index) => {
-    if (value.name == artistName) return (value.bio)
+  let ar = null
+  artist.forEach((value) => {
+    if (value.name === artistName) {
+      ar = value.bio
+    }
   })
+  return ar
 }
 
 artistInfo(artists, 'Kazimir Malevich')
