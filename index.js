@@ -344,7 +344,6 @@ function artistInfo(artist, artistName){
   return ar
 }
 
-artistInfo(artists, 'Kazimir Malevich')
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
@@ -356,10 +355,16 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(artists, nationality){
+  const ar = []
+  artists.forEach((value) => {
+    if(value.nationality.split(',').length !== 2 && value.nationality === nationality){
+      ar.push(value.name)
+    }
+  })
+  return ar
 }
-
+artistByCountry(artists, 'Spanish')
 
 
 /* ***** END OF TASKS ***** */
